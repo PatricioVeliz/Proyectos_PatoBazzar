@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
 
 }
 
@@ -15,7 +16,7 @@
     
 }
 
-.nav__title{
+.nav__title a{
     color: aqua;
 }
 .nav__btn{
@@ -23,7 +24,6 @@
     color: aliceblue;
     padding: 8px 10px;
     font-size: 15px;
-    text-decoration: none;
 }
 .nav__btn:hover{
     background-color: orange;
