@@ -1,12 +1,17 @@
+import './NavBar.css'
+
 const NavBar = () => {
     return (
-        <nav>
-            <h1>PatoBazzar</h1>
+        <nav className="nav__b">
             
-            <button>HOME</button>
-            <button>HOME</button>
-            <button>HOME</button>
+            <h1 className="nav__title">PatoBazzar</h1>
+            
+            <button className="nav__btn">HOME</button>
+            <button className="nav__btn">Utensilios de cocina</button>
+            <button className="nav__btn">Jardineria</button>
+
         </nav>
+
     )
 }
 export default NavBar 
