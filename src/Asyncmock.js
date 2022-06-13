@@ -21,7 +21,7 @@ const products = [
     id: "3",
     name: "Rallador 4 caras",
     price: 700,
-    category: "Utensilios de cocina",
+    category: "utensilios de cocina",
     img: "https://media.istockphoto.com/photos/metal-grater-with-four-different-sides-on-white-background-picture-id134357273?k=20&m=134357273&s=612x612&w=0&h=gemOFgWbZ_LZ8fUDZK7ou5wJtJ9i5vqzY0dCh3PWx2g=",
     stock: 20,
     description: "Rallador de cocina 4 caras para cocinar",
@@ -35,6 +35,24 @@ const products = [
     stock: 14,
     description: "Un colador para fideo,verduras,etc",
   },
+  {
+    id: "5",
+    name: "Rastrillo",
+    price: 700,
+    category: "jardin",
+    img: "https://assets.tramontina.com.br/upload/tramon/imagens/MUL/77909001PNM001G.png",
+    stock: 14,
+    description: "Rastrillo de mano, pracitico para uso personal o profesional",
+  },
+  {
+    id: "6",
+    name: "Maseta",
+    price: 300,
+    category: "jardin",
+    img: "https://casa-web.com.ar/wp-content/uploads/2011/10/maseta-de-interior-originales.jpg",
+    stock: 14,
+    description: "Maseta Practica, para plantas pequeñas",
+  },
 ];
 
 export const getProducts = () => {
@@ -46,7 +64,7 @@ export const getProducts = () => {
       } else {
         reject("ERROR!");
       }
-    }, 3000)
+    }, 300)
   })
 }
 
@@ -54,6 +72,14 @@ export const getProductsID = (id) => {
   return new Promise (resolve => {
     setTimeout(() => {
         resolve(products.find(prod => prod.id === id));
-    }, 2000)
+    }, 200)
   })
+}
+
+export const getProductsByCategory = (categoryId) =>{
+    return new Promise (resolve =>{
+        setTimeout(()=>{
+          resolve(products.filter(prod => prod.category === categoryId))
+        })
+    }, 250)
 }
