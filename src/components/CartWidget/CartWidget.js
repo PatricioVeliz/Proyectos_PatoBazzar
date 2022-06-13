@@ -1,7 +1,13 @@
+import '../NavBar/NavBar.css'
 
 const CartWidget = () => {
     return(
-        <i className="bi bi-cart3"></i>
+        <button className="nav__btn">
+            <i className="bi bi-cart3"></i>
+
+            0
+
+        </button>
     )
 }
 export default CartWidget

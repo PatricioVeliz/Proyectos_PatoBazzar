@@ -1,9 +1,8 @@
 import './Item.css'
-import ItemCount from '../ItemCount/ItemCount';
 import { Link } from 'react-router-dom';
 
 const Item = ({product}) => {
-    const {name, price, description, img, stock, id} = product;
+    const {name, price, img, id} = product;
     return(
         <div className="Container">
             <div className="Card">
@@ -12,7 +11,7 @@ const Item = ({product}) => {
                 <p>{price}</p>
                 
                 <Link to={`/detail/${id}`}>Detalle</Link>
-                <ItemCount initial={1} stock={stock} />
+                
             </div>
         </div>
     )

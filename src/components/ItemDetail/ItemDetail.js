@@ -1,14 +1,25 @@
-import './ItemDetail'
+import ItemCount from '../ItemCount/ItemCount'
+import './ItemDetail.css'
 
-const ItemDetail = ({product}) => {
+
+const ItemDetail = ({ name, description, price, stock,img }) => {
+
     return(
         
-        <div>
+        <div className="Container">
             <h1>ItemDetail</h1>
-            <h2>{product}</h2>
+            <div className="Card">
+            <h2>{name}</h2>
+            <img className='imagenes' src={img}></img>
+            <p>{price}</p>
+            <p>{description}</p>
+
+            <ItemCount initial={1} stock={stock}/>
+
+            </div>
         </div>
 
     )
 }
 
-export default ItemDetail
+export default ItemDetail 

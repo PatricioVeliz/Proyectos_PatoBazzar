@@ -13,7 +13,7 @@ const ItemDetailContainer= () =>{
         },[])
 
     return (
-        <ItemDetail product={product?.name}/>
+        <ItemDetail {...product}/>
     )
 }
 export default ItemDetailContainer
