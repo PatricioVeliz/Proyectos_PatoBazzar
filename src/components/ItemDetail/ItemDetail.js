@@ -1,3 +1,4 @@
+import './ItemDetail'
 
 const ItemDetail = ({product}) => {
     return(
