@@ -53,7 +53,7 @@ export const getProducts = () => {
 export const getProductsID = (id) => {
   return new Promise (resolve => {
     setTimeout(() => {
-        resolve(products.find(prod => prod.id === id))
+        resolve(products.find(prod => prod.id === id));
     }, 200)
   })
 }

@@ -2,17 +2,15 @@ import ItemDetail from "../ItemDetail/ItemDetail"
 import { useEffect, useState } from "react";
 import { getProductsID } from "../../Asyncmock";
 
-const ItemDetailContainer= ({id}) =>{
-    const [product, setProduct] = useState();
+const ItemDetailContainer= ({}) =>{
+    const [product, setProduct] = useState({});
 
-    useEffect(() => {
-        getProductsID(id).then(response => {
-            setProduct(response)
-        })
-    }, [])
+    useEffect(() =>{
+            getProductsID('1').then(result => setProduct(result));
+        },[])
 
     return (
-        <ItemDetail title={product?.name}/>
+        <ItemDetail product={product?.name}/>
     )
 }
 export default ItemDetailContainer
